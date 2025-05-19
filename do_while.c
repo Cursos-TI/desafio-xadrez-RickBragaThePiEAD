@@ -12,5 +12,9 @@ int main (){
 
     printf("%d.\n", i);
 
+    int option;
+
+    
+
 return 0;
 }
