@@ -16,38 +16,48 @@ int main() {
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
     int i=1;
-    printf("Movendo a torre: \n");
-    while (i <= MOVIMENTO_TORRE) {
-        printf("==> DIREITA [%d] \n", i);
+    printf("Movendo a torre (cinco casas para a direita): \n");
+    printf("TORRE ");
+        while (i <= MOVIMENTO_TORRE) {
+        printf("[%d] (==>) ", i);
         i++;
+        } 
     
-    } 
-    printf("\n");
-
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     int a = 1;
-    printf("Movendo o bispo: \n");	
+    printf("\nMovendo o bispo (Cinco casas para a diagonal (cima e direita): \n");	
+    printf("BISPO ");
     do
     {
-        printf("^> CIMA/DIREITA [%d] \n", a);
+        printf("[%d] (^ =>) ", a);
         a++;
 
     } while (a <= MOVIMENTO_BISPO);
-    printf("\n");
-    
+        
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
     int b;
-    printf("Movendo a rainha: \n");
+    printf("\nMovendo a rainha (Oito casas para a esquerda): \n");
+    printf("RAINHA ");
     for (b = 1; b <= MOVIMENTO_RAINHA; b++) {
-        printf("ESQUERDA [%d] <== \n", b);
+        printf("[%d] (<==) ", b);
     }
-    printf("\n");
-
+    
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    int const MOVIMENTO_CAVALO = 3; // Move-se em L. Duas casas para baixo e uma casa para a esquerda.
+    printf("\nMovendo o cavalo (Move-se em L. Duas casas para baixo e uma casa para a esquerda): \n");
+    printf("CAVALO ");
+    for (int c = 1; c <= MOVIMENTO_CAVALO; c++) {
+        while (c <= 2) {
+            printf("[%d] (V) ", c);
+            c++;   
+        }
+        printf("[%d] (<==) ", c);
+        }
+    printf("\n");
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
